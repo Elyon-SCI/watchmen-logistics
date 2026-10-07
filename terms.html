@@ -23,30 +23,6 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;l
 .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px 0 8px;display:flex;align-items:center;justify-content:space-between;height:72px;}
-.nav-logo{display:flex;align-items:center;text-decoration:none;overflow:hidden;}
-.nav-logo .logo-mark{width:130px;height:130px;margin:-45px -40px -45px -20px;flex-shrink:0;}
-.nav-logo .logo-mark img{width:100%;height:100%;object-fit:contain;}
-.nav-logo .logo-text{display:flex;flex-direction:column;align-items:center;line-height:1;}
-.nav-logo .logo-text .brand{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--white);}
-.nav-logo .logo-text .sub{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gray);margin-top:3px;}
-.nav-links{display:flex;align-items:center;gap:20px;list-style:none;}
-.nav-links a{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray-lt);text-decoration:none;transition:color 0.2s;}
-.nav-links a:hover{color:var(--white);}
-.nav-cta{display:inline-flex;align-items:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;padding:10px 24px;border-radius:6px;background:var(--gold);color:#0A0A0A!important;text-transform:uppercase;letter-spacing:1px;transition:opacity 0.2s;text-decoration:none;}
-.nav-cta:hover{opacity:0.85;}
-.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
-.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s;}
-.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
-.hamburger.open span:nth-child(2){opacity:0;}
-.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
-.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:24px;z-index:99;flex-direction:column;gap:4px;}
-.mobile-menu.open{display:flex;}
-.mobile-menu a{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray-lt);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);}
-.mobile-menu a:last-child{border-bottom:none;}
-.mobile-menu .mob-cta{margin-top:12px;background:var(--gold);color:var(--black)!important;padding:14px;border-radius:4px;text-align:center;}
-@media(max-width:768px){.nav-links{display:none;}.hamburger{display:flex;}}
 
 /* PAGE HERO */
 .page-hero{padding:120px 0 48px;border-bottom:1px solid var(--border);}
@@ -87,54 +63,47 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.9
 .contact-card a:hover{text-decoration:underline;}
 
 /* FOOTER */
-footer{border-top:1px solid var(--border);padding:32px 0;margin-top:0;}
-.footer-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;}
-.footer-copy{font-size:12px;color:var(--gray);}
-.footer-back{font-size:12px;color:var(--gray);text-decoration:none;transition:color 0.2s;}
-.footer-back:hover{color:var(--gold);}
 </style>
   <!-- Vercel Web Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <link rel="stylesheet" href="/site.css" />
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-mark"><img src="logos/watchmen-shield.png" alt="Watchmen Shield"></div>
-      <div class="logo-text">
-        <span class="brand">Watchmen</span>
-        <span class="sub">Logistics</span>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="roi.html">ROI Tools</a></li>
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="index.html#fivepl">5PL</a></li>
-      <li><a href="index.html#modes">Transport</a></li>
-      <li><a href="index.html#technology">Technology</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="https://watchmenhq.elyonsci.ai/book/watchmen-team" target="_blank" rel="noopener" class="nav-cta">Get Assessment</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+  <header class="wm-nav" id="wmNav">
+    <div class="wm-nav-inner">
+      <a href="/" class="wm-logo" aria-label="Watchmen Logistics home">
+        <img src="/logos/watchmen-shield-nav.png" alt="" width="34" height="40" />
+        <span class="wm-logo-text"><span class="brand">Watchmen</span><span class="sub">Logistics</span></span>
+      </a>
+      <ul class="wm-links">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/how-it-works.html">How It Works</a></li>
+        <li><a href="/roi.html">ROI Tools</a></li>
+        <li><a href="/#industries">Industries</a></li>
+        <li><a href="/#trinity">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <a href="https://watchmenhq.elyonsci.ai/book/watchmen-team" target="_blank" rel="noopener" class="wm-cta">See What's Possible</a>
+      <button class="wm-burger" id="wmBurger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="wmMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <nav class="wm-menu" id="wmMenu" aria-label="Mobile">
+    <a href="/#services">Services</a>
+    <a href="/how-it-works.html">How It Works</a>
+    <a href="/roi.html">ROI Tools</a>
+    <a href="/#industries">Industries</a>
+    <a href="/#trinity">About</a>
+    <a href="/#contact">Contact</a>
+    <a href="https://watchmenhq.elyonsci.ai/book/watchmen-team" target="_blank" rel="noopener" class="wm-cta">See What's Possible &rarr;</a>
+  </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="roi.html" style="color:var(--gold)">ROI Tools</a>
-  <a href="index.html#services">Services</a>
-  <a href="index.html#fivepl">5PL</a>
-  <a href="index.html#modes">Transport</a>
-  <a href="index.html#technology">Technology</a>
-  <a href="index.html#contact">Contact</a>
-  <a href="https://watchmenhq.elyonsci.ai/book/watchmen-team" target="_blank" rel="noopener" class="mob-cta">Get Assessment</a>
-</div>
 
 <!-- HERO -->
 <section class="page-hero">
@@ -535,26 +504,52 @@ footer{border-top:1px solid var(--border);padding:32px 0;margin-top:0;}
   </div>
 </section>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-copy">&copy; 2026 Watchmen Logistics. An authorized Trinity Logistics agent.</div>
-    <a href="index.html" class="footer-back">&larr; Back to Main Site</a>
-  </div>
-</footer>
+  <footer class="wm-footer">
+    <div class="wm-footer-wrap">
+      <div class="wm-footer-top">
+        <div class="wm-footer-brand">
+          <a href="/" class="wm-logo" aria-label="Watchmen Logistics home">
+            <img src="/logos/watchmen-shield-nav.png" alt="" width="34" height="40" />
+            <span class="wm-logo-text"><span class="brand">Watchmen</span><span class="sub">Logistics</span></span>
+          </a>
+          <p>Your supply chain command center. From 3PL execution to full 5PL orchestration &mdash; every mode, every lane, one partner.</p>
+        </div>
+        <div class="wm-footer-cols">
+          <div class="wm-footer-col">
+            <h4>Services</h4>
+            <a href="/#services">3PL Solutions</a>
+            <a href="/#services">4PL Orchestration</a>
+            <a href="/#fivepl">5PL Intelligence</a>
+            <a href="/#capabilities">Managed Solutions</a>
+          </div>
+          <div class="wm-footer-col">
+            <h4>Transport</h4>
+            <a href="/#modes">Ocean Freight</a>
+            <a href="/#modes">Air Freight</a>
+            <a href="/#modes">Road Freight</a>
+            <a href="/#modes">Rail &amp; Multimodal</a>
+          </div>
+          <div class="wm-footer-col">
+            <h4>Company</h4>
+            <a href="/#trinity">About</a>
+            <a href="/how-it-works.html">How It Works</a>
+            <a href="/roi.html">ROI Tools</a>
+            <a href="/#industries">Industries</a>
+            <a href="/#contact">Contact</a>
+            <a href="/terms.html">Terms &amp; Privacy</a>
+          </div>
+        </div>
+      </div>
+      <div class="wm-footer-bottom">
+        <p>&copy; 2026 Watchmen Logistics. An authorized Trinity Logistics agent.</p>
+        <div class="wm-footer-badge">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Always Watching. Always Delivering.
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<script>
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-});
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-  });
-});
-</script>
+  <script src="/site.js"></script>
 </body>
 </html>
