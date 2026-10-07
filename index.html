@@ -1513,38 +1513,8 @@
       color: var(--gray); font-size: 14px;
       margin-bottom: 28px;
     }
-    .form-group { margin-bottom: 18px; }
-    .form-group label {
-      display: block;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px; font-weight: 600;
-      letter-spacing: 0.5px; text-transform: uppercase;
-      color: var(--gray-lt);
-      margin-bottom: 6px;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%; padding: 12px 16px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--white);
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      transition: border-color 0.3s ease;
-      outline: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--gold);
-    }
-    .form-group select { cursor: pointer; }
-    .form-group select option { background: var(--surface); }
-    .form-group textarea { resize: vertical; min-height: 90px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .form-submit {
+      display: block; text-align: center; text-decoration: none;
       width: 100%; padding: 14px;
       font-family: 'Montserrat', sans-serif;
       font-size: 14px; font-weight: 700;
@@ -1558,19 +1528,6 @@
       background: var(--gold-bright);
       box-shadow: 0 0 30px var(--gold-glow);
     }
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .form-success.show { display: block; }
-    .form-success svg { width: 48px; height: 48px; stroke: var(--gold); margin: 0 auto 16px; }
-    .form-success h3 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 20px; font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .form-success p { color: var(--gray-lt); font-size: 15px; }
 
     /* ============================================================
        FOOTER
@@ -1689,7 +1646,6 @@
       .industries-grid { grid-template-columns: repeat(2, 1fr); }
       .trinity-stats { grid-template-columns: 1fr; }
       .engage-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; }
       .footer-links { flex-direction: column; gap: 32px; }
       .footer-bottom { flex-direction: column; text-align: center; }
@@ -2567,57 +2523,9 @@
         </div>
         <div class="reveal reveal-delay-2">
           <div class="contact-form" id="contactForm">
-            <h3>Request Your Assessment</h3>
-            <p class="form-sub">We'll respond within 24 business hours.</p>
-            <form id="assessmentForm">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" name="firstName" required placeholder="John" />
-                </div>
-                <div class="form-group">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" name="lastName" required placeholder="Smith" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email">Work Email</label>
-                <input type="email" id="email" name="email" required placeholder="john@company.com" />
-              </div>
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" required placeholder="Acme Corp" />
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="title">Title</label>
-                  <input type="text" id="title" name="title" placeholder="VP Supply Chain" />
-                </div>
-                <div class="form-group">
-                  <label for="spend">Annual Freight Spend</label>
-                  <select id="spend" name="spend">
-                    <option value="" disabled selected>Select range</option>
-                    <option value="under-2m">Under $2M</option>
-                    <option value="2m-10m">$2M - $10M</option>
-                    <option value="10m-50m">$10M - $50M</option>
-                    <option value="50m-plus">$50M+</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="challenge">Biggest Logistics Challenge</label>
-                <textarea id="challenge" name="challenge" placeholder="Tell us about your biggest pain point..."></textarea>
-              </div>
-              <button type="submit" class="form-submit">See What's Possible &rarr;</button>
-            </form>
-          </div>
-          <div class="form-success" id="formSuccess">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
-            <h3>Assessment Requested</h3>
-            <p>Our team will reach out within 24 business hours to schedule your no-cost network assessment.</p>
+            <h3>Book Your Assessment</h3>
+            <p class="form-sub">Pick a 30-minute time that works for you, straight on our team's calendar.</p>
+            <a href="https://watchmenhq.elyonsci.ai/book/watchmen-team" target="_blank" rel="noopener" class="form-submit">Pick a Time &rarr;</a>
           </div>
         </div>
       </div>
@@ -2772,41 +2680,6 @@
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('.hero-stat, .trinity-stat').forEach(s => statObserver.observe(s));
-
-    /* ---- Form handling ---- */
-    const form = document.getElementById('assessmentForm');
-    const formContainer = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const submitBtn = form.querySelector('.form-submit');
-      submitBtn.textContent = 'Submitting…';
-      submitBtn.disabled = true;
-
-      const data = {
-        firstName: form.querySelector('[name="firstName"]').value,
-        lastName: form.querySelector('[name="lastName"]').value,
-        email: form.querySelector('[name="email"]').value,
-        companyName: form.querySelector('[name="company"]').value,
-        title: form.querySelector('[name="title"]').value,
-        annual_freight_spend: form.querySelector('[name="spend"]').value,
-        biggest_challenge: form.querySelector('[name="challenge"]').value,
-        source: 'Watchmen Website — Assessment Form'
-      };
-
-      try {
-        await fetch('https://services.leadconnectorhq.com/hooks/3DbplT4vGfofTCswmtP4/webhook-trigger/oFPY6Cx1oNtqwn2dAMvE', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-      } catch(err) {
-        console.error('Webhook error:', err);
-      }
-
-      formContainer.style.display = 'none';
-      formSuccess.classList.add('show');
-    });
   </script>
 
 </body>
