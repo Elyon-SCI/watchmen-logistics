@@ -54,6 +54,7 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;o
 .ch-split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .ch-split.reverse{direction:rtl;}
 .ch-split.reverse > *{direction:ltr;}
+.ch-split.ch-solo{grid-template-columns:1fr;max-width:760px;}
 .ch-copy h2{font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,52px);font-weight:900;letter-spacing:-2px;line-height:1.0;margin-bottom:20px;}
 .ch-copy h2 .gold{color:var(--gold);}
 .ch-copy p{color:var(--gray-lt);font-size:16px;line-height:1.8;margin-bottom:16px;}
@@ -212,9 +213,7 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;o
         </div>
       </div>
       <div class="reveal-right">
-        <div class="video-box" style="aspect-ratio:16/9;background:var(--surface-2);border-radius:12px;border:1px solid var(--border);"></div>
-        <!-- Timeline below video -->
-        <div class="timeline" style="margin-top:40px;">
+        <div class="timeline">
           <div class="tl-item">
             <h4>Connect your carriers & systems</h4>
             <p>We integrate with your existing TMS, ERPs, and carrier portals — no rip and replace.</p>
@@ -257,13 +256,6 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;o
       <div class="ch-number">Chapter 02</div>
       <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(32px,5vw,64px);font-weight:900;letter-spacing:-2px;line-height:1.0;margin-bottom:20px;">One Screen. Every Shipment.<br><span style="color:var(--gold);">Zero Guesswork.</span></h2>
       <p style="font-size:17px;color:var(--gray-lt);line-height:1.8;">Your entire supply chain — every mode, every lane, every partner — visible in a single command center. No tab switching. No phone calls. No waiting on hold.</p>
-    </div>
-
-    <!-- VIDEO 2: Full-width showcase -->
-    <div class="video-full reveal">
-      <div class="video-box">
-        <div style="aspect-ratio:16/9;background:var(--surface-2);border-radius:12px;border:1px solid var(--border);"></div>
-      </div>
     </div>
 
     <div class="feature-list reveal">
@@ -312,7 +304,7 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;o
 ══════════════════════════════════════════ -->
 <section class="chapter" id="tracking">
   <div class="wrap">
-    <div class="ch-split reverse reveal">
+    <div class="ch-split ch-solo reveal">
       <div class="ch-copy reveal-left">
         <div class="ch-number">Chapter 03</div>
         <h2>We know where<br>your container <span class="gold">is.</span></h2>
@@ -326,9 +318,6 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;o
           <span class="ch-pill">Port Status</span>
         </div>
       </div>
-      <div class="reveal-right">
-        <div class="video-box" style="aspect-ratio:16/9;background:var(--surface-2);border-radius:12px;border:1px solid var(--border);"></div>
-      </div>
     </div>
   </div>
 </section>
@@ -338,7 +327,7 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;o
 ══════════════════════════════════════════ -->
 <section class="chapter" id="intelligence">
   <div class="wrap">
-    <div class="ch-split reveal">
+    <div class="ch-split ch-solo reveal">
       <div class="ch-copy reveal-left">
         <div class="ch-number">Chapter 04</div>
         <h2>More than dots<br>on a <span class="gold">map.</span></h2>
@@ -350,9 +339,6 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;o
           <span class="ch-pill">Lane Optimization</span>
           <span class="ch-pill">Carrier Benchmarking</span>
         </div>
-      </div>
-      <div class="reveal-right">
-        <div class="video-box" style="aspect-ratio:16/9;background:var(--surface-2);border-radius:12px;border:1px solid var(--border);"></div>
       </div>
     </div>
   </div>
