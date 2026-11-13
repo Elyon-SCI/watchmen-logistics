@@ -62,7 +62,7 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;m
 .tab-btn:last-child{border-right:none;}
 .tab-btn:hover{color:var(--white);background:var(--surface);}
 .tab-btn.active{color:var(--black);background:var(--gold);}
-.tab-btn .tab-sub{display:block;font-family:'Inter',sans-serif;font-size:10px;font-weight:400;letter-spacing:0.5px;text-transform:none;margin-top:3px;opacity:0.7;}
+.tab-btn .tab-sub{display:block;font-family:'Inter',sans-serif;font-size:10px;font-weight:400;letter-spacing:0.5px;text-transform:none;margin-top:3px;}
 .tab-panel{display:none;}
 .tab-panel.active{display:block;}
 
@@ -241,6 +241,7 @@ input[type="range"]:hover::-webkit-slider-thumb{transform:scale(1.25);box-shadow
     <a href="/#contact">Contact</a>
     <a href="https://watchmenhq.elyonsci.ai/book/watchmen-team" target="_blank" rel="noopener" class="wm-cta">See What's Possible &rarr;</a>
   </nav>
+  <main id="main">
 
 
 <!-- HERO -->
@@ -288,36 +289,36 @@ input[type="range"]:hover::-webkit-slider-thumb{transform:scale(1.25);box-shadow
       <div class="calc-grid2">
         <div class="calc-card">
           <div class="calc-card-title">Company Profile</div>
-          <div class="ig"><div class="il"><span>Annual Freight Spend</span><span class="iv" id="v-freightSpend">$25,000,000</span></div><input type="range" id="freightSpend" min="1000000" max="500000000" step="1000000" value="25000000" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Annual Shipment Volume</span><span class="iv" id="v-shipments">15,000</span></div><input type="range" id="shipments" min="500" max="500000" step="500" value="15000" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Avg. Cost per Shipment</span><span class="iv" id="v-costPerShip">$1,667</span></div><input type="range" id="costPerShip" min="100" max="20000" step="50" value="1667" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Logistics Headcount (FTE)</span><span class="iv" id="v-fte">12</span></div><input type="range" id="fte" min="1" max="200" step="1" value="12" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Avg. FTE Fully-Loaded Cost</span><span class="iv" id="v-fteCost">$95,000</span></div><input type="range" id="fteCost" min="40000" max="250000" step="5000" value="95000" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-freightSpend">Annual Freight Spend</span><span class="iv" id="v-freightSpend">$25,000,000</span></div><input type="range" id="freightSpend" aria-labelledby="l-freightSpend" aria-describedby="v-freightSpend" min="1000000" max="500000000" step="1000000" value="25000000" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-shipments">Annual Shipment Volume</span><span class="iv" id="v-shipments">15,000</span></div><input type="range" id="shipments" aria-labelledby="l-shipments" aria-describedby="v-shipments" min="500" max="500000" step="500" value="15000" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-costPerShip">Avg. Cost per Shipment</span><span class="iv" id="v-costPerShip">$1,667</span></div><input type="range" id="costPerShip" aria-labelledby="l-costPerShip" aria-describedby="v-costPerShip" min="100" max="20000" step="50" value="1667" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-fte">Logistics Headcount (FTE)</span><span class="iv" id="v-fte">12</span></div><input type="range" id="fte" aria-labelledby="l-fte" aria-describedby="v-fte" min="1" max="200" step="1" value="12" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-fteCost">Avg. FTE Fully-Loaded Cost</span><span class="iv" id="v-fteCost">$95,000</span></div><input type="range" id="fteCost" aria-labelledby="l-fteCost" aria-describedby="v-fteCost" min="40000" max="250000" step="5000" value="95000" oninput="calcTMS()"></div>
         </div>
         <div class="calc-card">
           <div class="calc-card-title">Current Performance</div>
-          <div class="ig"><div class="il"><span>On-Time Delivery Rate</span><span class="iv" id="v-otd">82%</span></div><input type="range" id="otd" min="50" max="99" step="1" value="82" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Carrier Contract Compliance</span><span class="iv" id="v-compliance">68%</span></div><input type="range" id="compliance" min="20" max="99" step="1" value="68" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Freight Invoice Error Rate</span><span class="iv" id="v-invoiceError">7%</span></div><input type="range" id="invoiceError" min="1" max="30" step="1" value="7" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Empty Miles / Backhaul Waste</span><span class="iv" id="v-emptyMiles">22%</span></div><input type="range" id="emptyMiles" min="5" max="60" step="1" value="22" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Annual Freight Claims Cost</span><span class="iv" id="v-claims">$350,000</span></div><input type="range" id="claims" min="0" max="5000000" step="50000" value="350000" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-otd">On-Time Delivery Rate</span><span class="iv" id="v-otd">82%</span></div><input type="range" id="otd" aria-labelledby="l-otd" aria-describedby="v-otd" min="50" max="99" step="1" value="82" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-compliance">Carrier Contract Compliance</span><span class="iv" id="v-compliance">68%</span></div><input type="range" id="compliance" aria-labelledby="l-compliance" aria-describedby="v-compliance" min="20" max="99" step="1" value="68" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-invoiceError">Freight Invoice Error Rate</span><span class="iv" id="v-invoiceError">7%</span></div><input type="range" id="invoiceError" aria-labelledby="l-invoiceError" aria-describedby="v-invoiceError" min="1" max="30" step="1" value="7" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-emptyMiles">Empty Miles / Backhaul Waste</span><span class="iv" id="v-emptyMiles">22%</span></div><input type="range" id="emptyMiles" aria-labelledby="l-emptyMiles" aria-describedby="v-emptyMiles" min="5" max="60" step="1" value="22" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-claims">Annual Freight Claims Cost</span><span class="iv" id="v-claims">$350,000</span></div><input type="range" id="claims" aria-labelledby="l-claims" aria-describedby="v-claims" min="0" max="5000000" step="50000" value="350000" oninput="calcTMS()"></div>
         </div>
       </div>
 
       <div class="calc-grid2">
         <div class="calc-card">
           <div class="calc-card-title">AI TMS Investment</div>
-          <div class="ig"><div class="il"><span>Annual Platform License</span><span class="iv" id="v-license">$180,000</span></div><input type="range" id="license" min="20000" max="2000000" step="10000" value="180000" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Implementation & Integration</span><span class="iv" id="v-implCost">$250,000</span></div><input type="range" id="implCost" min="25000" max="2000000" step="25000" value="250000" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Annual Maintenance & Support</span><span class="iv" id="v-support">$36,000</span></div><input type="range" id="support" min="5000" max="500000" step="5000" value="36000" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Training & Change Management</span><span class="iv" id="v-training">$45,000</span></div><input type="range" id="training" min="5000" max="300000" step="5000" value="45000" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-license">Annual Platform License</span><span class="iv" id="v-license">$180,000</span></div><input type="range" id="license" aria-labelledby="l-license" aria-describedby="v-license" min="20000" max="2000000" step="10000" value="180000" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-implCost">Implementation & Integration</span><span class="iv" id="v-implCost">$250,000</span></div><input type="range" id="implCost" aria-labelledby="l-implCost" aria-describedby="v-implCost" min="25000" max="2000000" step="25000" value="250000" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-support">Annual Maintenance & Support</span><span class="iv" id="v-support">$36,000</span></div><input type="range" id="support" aria-labelledby="l-support" aria-describedby="v-support" min="5000" max="500000" step="5000" value="36000" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-training">Training & Change Management</span><span class="iv" id="v-training">$45,000</span></div><input type="range" id="training" aria-labelledby="l-training" aria-describedby="v-training" min="5000" max="300000" step="5000" value="45000" oninput="calcTMS()"></div>
         </div>
         <div class="calc-card">
           <div class="calc-card-title">AI Improvement Benchmarks</div>
-          <div class="ig"><div class="il"><span>Freight Cost Reduction</span><span class="iv" id="v-freightReduc">12%</span></div><input type="range" id="freightReduc" min="3" max="25" step="1" value="12" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Labor Productivity Gain</span><span class="iv" id="v-laborGain">35%</span></div><input type="range" id="laborGain" min="10" max="70" step="5" value="35" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Invoice Error Reduction</span><span class="iv" id="v-invoiceReduc">75%</span></div><input type="range" id="invoiceReduc" min="30" max="95" step="5" value="75" oninput="calcTMS()"></div>
-          <div class="ig"><div class="il"><span>Claims Reduction</span><span class="iv" id="v-claimReduc">40%</span></div><input type="range" id="claimReduc" min="10" max="80" step="5" value="40" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-freightReduc">Freight Cost Reduction</span><span class="iv" id="v-freightReduc">12%</span></div><input type="range" id="freightReduc" aria-labelledby="l-freightReduc" aria-describedby="v-freightReduc" min="3" max="25" step="1" value="12" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-laborGain">Labor Productivity Gain</span><span class="iv" id="v-laborGain">35%</span></div><input type="range" id="laborGain" aria-labelledby="l-laborGain" aria-describedby="v-laborGain" min="10" max="70" step="5" value="35" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-invoiceReduc">Invoice Error Reduction</span><span class="iv" id="v-invoiceReduc">75%</span></div><input type="range" id="invoiceReduc" aria-labelledby="l-invoiceReduc" aria-describedby="v-invoiceReduc" min="30" max="95" step="5" value="75" oninput="calcTMS()"></div>
+          <div class="ig"><div class="il"><span id="l-claimReduc">Claims Reduction</span><span class="iv" id="v-claimReduc">40%</span></div><input type="range" id="claimReduc" aria-labelledby="l-claimReduc" aria-describedby="v-claimReduc" min="10" max="80" step="5" value="40" oninput="calcTMS()"></div>
         </div>
       </div>
 
@@ -359,38 +360,38 @@ input[type="range"]:hover::-webkit-slider-thumb{transform:scale(1.25);box-shadow
       <div class="calc-grid2">
         <div class="calc-card">
           <div class="calc-card-title"><span class="sn">1</span> Inventory Profile</div>
-          <div class="ig"><div class="il"><span>Total Inventory Value (Avg)</span><span class="iv" id="v-invValue">$8,500,000</span></div><input type="range" id="invValue" min="100000" max="500000000" step="100000" value="8500000" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Annual COGS / Throughput</span><span class="iv" id="v-cogs">$42,000,000</span></div><input type="range" id="cogs" min="500000" max="2000000000" step="500000" value="42000000" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Number of SKUs</span><span class="iv" id="v-skus">4,200</span></div><input type="range" id="skus" min="50" max="500000" step="50" value="4200" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Number of Locations / DCs</span><span class="iv" id="v-dcs">3</span></div><input type="range" id="dcs" min="1" max="200" step="1" value="3" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Inventory Carrying Cost Rate</span><span class="iv" id="v-carrying">24%</span></div><input type="range" id="carrying" min="10" max="40" step="1" value="24" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-invValue">Total Inventory Value (Avg)</span><span class="iv" id="v-invValue">$8,500,000</span></div><input type="range" id="invValue" aria-labelledby="l-invValue" aria-describedby="v-invValue" min="100000" max="500000000" step="100000" value="8500000" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-cogs">Annual COGS / Throughput</span><span class="iv" id="v-cogs">$42,000,000</span></div><input type="range" id="cogs" aria-labelledby="l-cogs" aria-describedby="v-cogs" min="500000" max="2000000000" step="500000" value="42000000" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-skus">Number of SKUs</span><span class="iv" id="v-skus">4,200</span></div><input type="range" id="skus" aria-labelledby="l-skus" aria-describedby="v-skus" min="50" max="500000" step="50" value="4200" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-dcs">Number of Locations / DCs</span><span class="iv" id="v-dcs">3</span></div><input type="range" id="dcs" aria-labelledby="l-dcs" aria-describedby="v-dcs" min="1" max="200" step="1" value="3" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-carrying">Inventory Carrying Cost Rate</span><span class="iv" id="v-carrying">24%</span></div><input type="range" id="carrying" aria-labelledby="l-carrying" aria-describedby="v-carrying" min="10" max="40" step="1" value="24" oninput="calcIMS()"></div>
         </div>
         <div class="calc-card">
           <div class="calc-card-title"><span class="sn">2</span> Current Pain Points</div>
-          <div class="ig"><div class="il"><span>Forecast Accuracy (MAPE basis)</span><span class="iv" id="v-forecastAcc">61%</span></div><input type="range" id="forecastAcc" min="20" max="95" step="1" value="61" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Stockout Rate</span><span class="iv" id="v-stockout">8%</span></div><input type="range" id="stockout" min="1" max="30" step="1" value="8" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Overstock / Excess Inventory %</span><span class="iv" id="v-overstock">18%</span></div><input type="range" id="overstock" min="2" max="50" step="1" value="18" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Annual Shrinkage / Obsolescence %</span><span class="iv" id="v-shrinkage">3%</span></div><input type="range" id="shrinkage" min="0.5" max="15" step="0.5" value="3" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Inventory Ops Headcount (FTE)</span><span class="iv" id="v-invFTE">8</span></div><input type="range" id="invFTE" min="1" max="200" step="1" value="8" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-forecastAcc">Forecast Accuracy (MAPE basis)</span><span class="iv" id="v-forecastAcc">61%</span></div><input type="range" id="forecastAcc" aria-labelledby="l-forecastAcc" aria-describedby="v-forecastAcc" min="20" max="95" step="1" value="61" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-stockout">Stockout Rate</span><span class="iv" id="v-stockout">8%</span></div><input type="range" id="stockout" aria-labelledby="l-stockout" aria-describedby="v-stockout" min="1" max="30" step="1" value="8" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-overstock">Overstock / Excess Inventory %</span><span class="iv" id="v-overstock">18%</span></div><input type="range" id="overstock" aria-labelledby="l-overstock" aria-describedby="v-overstock" min="2" max="50" step="1" value="18" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-shrinkage">Annual Shrinkage / Obsolescence %</span><span class="iv" id="v-shrinkage">3%</span></div><input type="range" id="shrinkage" aria-labelledby="l-shrinkage" aria-describedby="v-shrinkage" min="0.5" max="15" step="0.5" value="3" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-invFTE">Inventory Ops Headcount (FTE)</span><span class="iv" id="v-invFTE">8</span></div><input type="range" id="invFTE" aria-labelledby="l-invFTE" aria-describedby="v-invFTE" min="1" max="200" step="1" value="8" oninput="calcIMS()"></div>
         </div>
       </div>
 
       <div class="calc-grid2">
         <div class="calc-card">
           <div class="calc-card-title"><span class="sn">3</span> Investment Costs</div>
-          <div class="ig"><div class="il"><span>Annual SaaS License</span><span class="iv" id="v-imsLicense">$120,000</span></div><input type="range" id="imsLicense" min="15000" max="1500000" step="5000" value="120000" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Implementation & Data Migration</span><span class="iv" id="v-imsImpl">$180,000</span></div><input type="range" id="imsImpl" min="20000" max="2000000" step="10000" value="180000" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Annual Maintenance</span><span class="iv" id="v-imsMaint">$24,000</span></div><input type="range" id="imsMaint" min="5000" max="300000" step="5000" value="24000" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Training & Change Management</span><span class="iv" id="v-imsTraining">$35,000</span></div><input type="range" id="imsTraining" min="5000" max="200000" step="5000" value="35000" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Avg. FTE Cost (fully loaded)</span><span class="iv" id="v-invFTEcost">$85,000</span></div><input type="range" id="invFTEcost" min="40000" max="200000" step="5000" value="85000" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-imsLicense">Annual SaaS License</span><span class="iv" id="v-imsLicense">$120,000</span></div><input type="range" id="imsLicense" aria-labelledby="l-imsLicense" aria-describedby="v-imsLicense" min="15000" max="1500000" step="5000" value="120000" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-imsImpl">Implementation & Data Migration</span><span class="iv" id="v-imsImpl">$180,000</span></div><input type="range" id="imsImpl" aria-labelledby="l-imsImpl" aria-describedby="v-imsImpl" min="20000" max="2000000" step="10000" value="180000" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-imsMaint">Annual Maintenance</span><span class="iv" id="v-imsMaint">$24,000</span></div><input type="range" id="imsMaint" aria-labelledby="l-imsMaint" aria-describedby="v-imsMaint" min="5000" max="300000" step="5000" value="24000" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-imsTraining">Training & Change Management</span><span class="iv" id="v-imsTraining">$35,000</span></div><input type="range" id="imsTraining" aria-labelledby="l-imsTraining" aria-describedby="v-imsTraining" min="5000" max="200000" step="5000" value="35000" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-invFTEcost">Avg. FTE Cost (fully loaded)</span><span class="iv" id="v-invFTEcost">$85,000</span></div><input type="range" id="invFTEcost" aria-labelledby="l-invFTEcost" aria-describedby="v-invFTEcost" min="40000" max="200000" step="5000" value="85000" oninput="calcIMS()"></div>
         </div>
         <div class="calc-card">
           <div class="calc-card-title"><span class="sn">4</span> AI Performance Benchmarks</div>
-          <div class="ig"><div class="il"><span>Forecast Accuracy Improvement</span><span class="iv" id="v-forecastImp">28%</span></div><input type="range" id="forecastImp" min="5" max="50" step="1" value="28" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Inventory Reduction (working capital)</span><span class="iv" id="v-invReduc">22%</span></div><input type="range" id="invReduc" min="5" max="45" step="1" value="22" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Stockout Reduction</span><span class="iv" id="v-stockoutReduc">60%</span></div><input type="range" id="stockoutReduc" min="20" max="90" step="5" value="60" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Shrinkage / Obsolescence Reduction</span><span class="iv" id="v-shrinkReduc">45%</span></div><input type="range" id="shrinkReduc" min="10" max="80" step="5" value="45" oninput="calcIMS()"></div>
-          <div class="ig"><div class="il"><span>Labor Productivity Gain</span><span class="iv" id="v-invLaborGain">40%</span></div><input type="range" id="invLaborGain" min="10" max="70" step="5" value="40" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-forecastImp">Forecast Accuracy Improvement</span><span class="iv" id="v-forecastImp">28%</span></div><input type="range" id="forecastImp" aria-labelledby="l-forecastImp" aria-describedby="v-forecastImp" min="5" max="50" step="1" value="28" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-invReduc">Inventory Reduction (working capital)</span><span class="iv" id="v-invReduc">22%</span></div><input type="range" id="invReduc" aria-labelledby="l-invReduc" aria-describedby="v-invReduc" min="5" max="45" step="1" value="22" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-stockoutReduc">Stockout Reduction</span><span class="iv" id="v-stockoutReduc">60%</span></div><input type="range" id="stockoutReduc" aria-labelledby="l-stockoutReduc" aria-describedby="v-stockoutReduc" min="20" max="90" step="5" value="60" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-shrinkReduc">Shrinkage / Obsolescence Reduction</span><span class="iv" id="v-shrinkReduc">45%</span></div><input type="range" id="shrinkReduc" aria-labelledby="l-shrinkReduc" aria-describedby="v-shrinkReduc" min="10" max="80" step="5" value="45" oninput="calcIMS()"></div>
+          <div class="ig"><div class="il"><span id="l-invLaborGain">Labor Productivity Gain</span><span class="iv" id="v-invLaborGain">40%</span></div><input type="range" id="invLaborGain" aria-labelledby="l-invLaborGain" aria-describedby="v-invLaborGain" min="10" max="70" step="5" value="40" oninput="calcIMS()"></div>
         </div>
       </div>
 
@@ -434,43 +435,43 @@ input[type="range"]:hover::-webkit-slider-thumb{transform:scale(1.25);box-shadow
       <div class="calc-grid2">
         <div class="calc-card">
           <div class="calc-card-title">Supply Chain Baseline</div>
-          <div class="ig"><div class="il"><span>Total Annual Supply Chain Spend</span><span class="iv" id="v-scSpend">$85,000,000</span></div><input type="range" id="scSpend" min="5000000" max="2000000000" step="1000000" value="85000000" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Annual Revenue</span><span class="iv" id="v-revenue">$320,000,000</span></div><input type="range" id="revenue" min="5000000" max="5000000000" step="5000000" value="320000000" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Supply Chain as % of Revenue</span><span class="iv" id="v-scPct">—</span></div><input type="range" id="scPct" min="5" max="60" step="1" value="27" oninput="calc5PL()" style="opacity:0.3;pointer-events:none"></div>
-          <div class="ig"><div class="il"><span>Number of Suppliers</span><span class="iv" id="v-suppliers">180</span></div><input type="range" id="suppliers" min="5" max="5000" step="5" value="180" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>3PL / Logistics Partners</span><span class="iv" id="v-partners">7</span></div><input type="range" id="partners" min="1" max="100" step="1" value="7" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Supply Chain FTEs (Total)</span><span class="iv" id="v-scFTE">28</span></div><input type="range" id="scFTE" min="2" max="500" step="1" value="28" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Avg. FTE Fully-Loaded Cost</span><span class="iv" id="v-scFTEcost">$105,000</span></div><input type="range" id="scFTEcost" min="40000" max="250000" step="5000" value="105000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-scSpend">Total Annual Supply Chain Spend</span><span class="iv" id="v-scSpend">$85,000,000</span></div><input type="range" id="scSpend" aria-labelledby="l-scSpend" aria-describedby="v-scSpend" min="5000000" max="2000000000" step="1000000" value="85000000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-revenue">Annual Revenue</span><span class="iv" id="v-revenue">$320,000,000</span></div><input type="range" id="revenue" aria-labelledby="l-revenue" aria-describedby="v-revenue" min="5000000" max="5000000000" step="5000000" value="320000000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-scPct">Supply Chain as % of Revenue</span><span class="iv" id="v-scPct">—</span></div><input type="range" id="scPct" aria-labelledby="l-scPct" aria-describedby="v-scPct" min="5" max="60" step="1" value="27" oninput="calc5PL()" style="opacity:0.3;pointer-events:none"></div>
+          <div class="ig"><div class="il"><span id="l-suppliers">Number of Suppliers</span><span class="iv" id="v-suppliers">180</span></div><input type="range" id="suppliers" aria-labelledby="l-suppliers" aria-describedby="v-suppliers" min="5" max="5000" step="5" value="180" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-partners">3PL / Logistics Partners</span><span class="iv" id="v-partners">7</span></div><input type="range" id="partners" aria-labelledby="l-partners" aria-describedby="v-partners" min="1" max="100" step="1" value="7" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-scFTE">Supply Chain FTEs (Total)</span><span class="iv" id="v-scFTE">28</span></div><input type="range" id="scFTE" aria-labelledby="l-scFTE" aria-describedby="v-scFTE" min="2" max="500" step="1" value="28" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-scFTEcost">Avg. FTE Fully-Loaded Cost</span><span class="iv" id="v-scFTEcost">$105,000</span></div><input type="range" id="scFTEcost" aria-labelledby="l-scFTEcost" aria-describedby="v-scFTEcost" min="40000" max="250000" step="5000" value="105000" oninput="calc5PL()"></div>
         </div>
         <div class="calc-card">
           <div class="calc-card-title">Current Performance Gaps</div>
-          <div class="ig"><div class="il"><span>Perfect Order Rate</span><span class="iv" id="v-por">74%</span></div><input type="range" id="por" min="30" max="99" step="1" value="74" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Supply Chain Visibility Score</span><span class="iv" id="v-visibility">35%</span></div><input type="range" id="visibility" min="5" max="95" step="5" value="35" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Avg. Days to Resolve Disruptions</span><span class="iv" id="v-disruption">4.2 days</span></div><input type="range" id="disruption" min="0.5" max="30" step="0.5" value="4.2" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Annual Cost of Disruptions / Expediting</span><span class="iv" id="v-expediting">$2,800,000</span></div><input type="range" id="expediting" min="50000" max="50000000" step="50000" value="2800000" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Sustainability / Carbon Penalty Exposure</span><span class="iv" id="v-carbon">$450,000</span></div><input type="range" id="carbon" min="0" max="10000000" step="50000" value="450000" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Working Capital Tied in SC (Days)</span><span class="iv" id="v-dso">68 days</span></div><input type="range" id="dso" min="10" max="180" step="1" value="68" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Annual Compliance / Penalties Cost</span><span class="iv" id="v-penalties">$380,000</span></div><input type="range" id="penalties" min="0" max="10000000" step="50000" value="380000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-por">Perfect Order Rate</span><span class="iv" id="v-por">74%</span></div><input type="range" id="por" aria-labelledby="l-por" aria-describedby="v-por" min="30" max="99" step="1" value="74" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-visibility">Supply Chain Visibility Score</span><span class="iv" id="v-visibility">35%</span></div><input type="range" id="visibility" aria-labelledby="l-visibility" aria-describedby="v-visibility" min="5" max="95" step="5" value="35" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-disruption">Avg. Days to Resolve Disruptions</span><span class="iv" id="v-disruption">4.2 days</span></div><input type="range" id="disruption" aria-labelledby="l-disruption" aria-describedby="v-disruption" min="0.5" max="30" step="0.5" value="4.2" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-expediting">Annual Cost of Disruptions / Expediting</span><span class="iv" id="v-expediting">$2,800,000</span></div><input type="range" id="expediting" aria-labelledby="l-expediting" aria-describedby="v-expediting" min="50000" max="50000000" step="50000" value="2800000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-carbon">Sustainability / Carbon Penalty Exposure</span><span class="iv" id="v-carbon">$450,000</span></div><input type="range" id="carbon" aria-labelledby="l-carbon" aria-describedby="v-carbon" min="0" max="10000000" step="50000" value="450000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-dso">Working Capital Tied in SC (Days)</span><span class="iv" id="v-dso">68 days</span></div><input type="range" id="dso" aria-labelledby="l-dso" aria-describedby="v-dso" min="10" max="180" step="1" value="68" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-penalties">Annual Compliance / Penalties Cost</span><span class="iv" id="v-penalties">$380,000</span></div><input type="range" id="penalties" aria-labelledby="l-penalties" aria-describedby="v-penalties" min="0" max="10000000" step="50000" value="380000" oninput="calc5PL()"></div>
         </div>
       </div>
 
       <div class="calc-grid2">
         <div class="calc-card">
           <div class="calc-card-title">5PL Platform Investment</div>
-          <div class="ig"><div class="il"><span>Annual Platform License (SaaS)</span><span class="iv" id="v-plLicense">$420,000</span></div><input type="range" id="plLicense" min="50000" max="5000000" step="25000" value="420000" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Implementation & Integration</span><span class="iv" id="v-plImpl">$750,000</span></div><input type="range" id="plImpl" min="50000" max="5000000" step="50000" value="750000" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Control Tower Setup & Data Onboarding</span><span class="iv" id="v-plSetup">$180,000</span></div><input type="range" id="plSetup" min="20000" max="1000000" step="10000" value="180000" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Annual Managed Services Fees</span><span class="iv" id="v-plManaged">$240,000</span></div><input type="range" id="plManaged" min="0" max="2000000" step="20000" value="240000" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Training & Change Management</span><span class="iv" id="v-plTraining">$85,000</span></div><input type="range" id="plTraining" min="10000" max="500000" step="10000" value="85000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-plLicense">Annual Platform License (SaaS)</span><span class="iv" id="v-plLicense">$420,000</span></div><input type="range" id="plLicense" aria-labelledby="l-plLicense" aria-describedby="v-plLicense" min="50000" max="5000000" step="25000" value="420000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-plImpl">Implementation & Integration</span><span class="iv" id="v-plImpl">$750,000</span></div><input type="range" id="plImpl" aria-labelledby="l-plImpl" aria-describedby="v-plImpl" min="50000" max="5000000" step="50000" value="750000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-plSetup">Control Tower Setup & Data Onboarding</span><span class="iv" id="v-plSetup">$180,000</span></div><input type="range" id="plSetup" aria-labelledby="l-plSetup" aria-describedby="v-plSetup" min="20000" max="1000000" step="10000" value="180000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-plManaged">Annual Managed Services Fees</span><span class="iv" id="v-plManaged">$240,000</span></div><input type="range" id="plManaged" aria-labelledby="l-plManaged" aria-describedby="v-plManaged" min="0" max="2000000" step="20000" value="240000" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-plTraining">Training & Change Management</span><span class="iv" id="v-plTraining">$85,000</span></div><input type="range" id="plTraining" aria-labelledby="l-plTraining" aria-describedby="v-plTraining" min="10000" max="500000" step="10000" value="85000" oninput="calc5PL()"></div>
         </div>
         <div class="calc-card">
           <div class="calc-card-title">AI Improvement Benchmarks</div>
-          <div class="ig"><div class="il"><span>Supply Chain Cost Reduction</span><span class="iv" id="v-scReduc">14%</span></div><input type="range" id="scReduc" min="3" max="30" step="1" value="14" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Perfect Order Rate Improvement</span><span class="iv" id="v-porImp">18%</span></div><input type="range" id="porImp" min="5" max="40" step="1" value="18" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Disruption Resolution Speed-up</span><span class="iv" id="v-disruptReduc">65%</span></div><input type="range" id="disruptReduc" min="20" max="90" step="5" value="65" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Working Capital Days Reduction</span><span class="iv" id="v-dsoReduc">20%</span></div><input type="range" id="dsoReduc" min="5" max="50" step="5" value="20" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Labor Productivity Gain</span><span class="iv" id="v-scLaborGain">45%</span></div><input type="range" id="scLaborGain" min="10" max="70" step="5" value="45" oninput="calc5PL()"></div>
-          <div class="ig"><div class="il"><span>Carbon / Compliance Risk Reduction</span><span class="iv" id="v-carbonReduc">55%</span></div><input type="range" id="carbonReduc" min="10" max="85" step="5" value="55" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-scReduc">Supply Chain Cost Reduction</span><span class="iv" id="v-scReduc">14%</span></div><input type="range" id="scReduc" aria-labelledby="l-scReduc" aria-describedby="v-scReduc" min="3" max="30" step="1" value="14" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-porImp">Perfect Order Rate Improvement</span><span class="iv" id="v-porImp">18%</span></div><input type="range" id="porImp" aria-labelledby="l-porImp" aria-describedby="v-porImp" min="5" max="40" step="1" value="18" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-disruptReduc">Disruption Resolution Speed-up</span><span class="iv" id="v-disruptReduc">65%</span></div><input type="range" id="disruptReduc" aria-labelledby="l-disruptReduc" aria-describedby="v-disruptReduc" min="20" max="90" step="5" value="65" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-dsoReduc">Working Capital Days Reduction</span><span class="iv" id="v-dsoReduc">20%</span></div><input type="range" id="dsoReduc" aria-labelledby="l-dsoReduc" aria-describedby="v-dsoReduc" min="5" max="50" step="5" value="20" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-scLaborGain">Labor Productivity Gain</span><span class="iv" id="v-scLaborGain">45%</span></div><input type="range" id="scLaborGain" aria-labelledby="l-scLaborGain" aria-describedby="v-scLaborGain" min="10" max="70" step="5" value="45" oninput="calc5PL()"></div>
+          <div class="ig"><div class="il"><span id="l-carbonReduc">Carbon / Compliance Risk Reduction</span><span class="iv" id="v-carbonReduc">55%</span></div><input type="range" id="carbonReduc" aria-labelledby="l-carbonReduc" aria-describedby="v-carbonReduc" min="10" max="85" step="5" value="55" oninput="calc5PL()"></div>
         </div>
       </div>
 
@@ -503,6 +504,7 @@ input[type="range"]:hover::-webkit-slider-thumb{transform:scale(1.25);box-shadow
   </div>
 </section>
 
+  </main>
   <footer class="wm-footer">
     <div class="wm-footer-wrap">
       <div class="wm-footer-top">
@@ -515,21 +517,21 @@ input[type="range"]:hover::-webkit-slider-thumb{transform:scale(1.25);box-shadow
         </div>
         <div class="wm-footer-cols">
           <div class="wm-footer-col">
-            <h4>Services</h4>
+            <h3>Services</h3>
             <a href="/#services">3PL Solutions</a>
             <a href="/#services">4PL Orchestration</a>
             <a href="/#fivepl">5PL Intelligence</a>
             <a href="/#capabilities">Managed Solutions</a>
           </div>
           <div class="wm-footer-col">
-            <h4>Transport</h4>
+            <h3>Transport</h3>
             <a href="/#modes">Ocean Freight</a>
             <a href="/#modes">Air Freight</a>
             <a href="/#modes">Road Freight</a>
             <a href="/#modes">Rail &amp; Multimodal</a>
           </div>
           <div class="wm-footer-col">
-            <h4>Company</h4>
+            <h3>Company</h3>
             <a href="/#trinity">About</a>
             <a href="/how-it-works">How It Works</a>
             <a href="/roi">ROI Tools</a>
