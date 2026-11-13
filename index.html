@@ -35,31 +35,6 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://watchmenlogistics.com/#organization","name":"Watchmen Logistics","url":"https://watchmenlogistics.com/","logo":"https://watchmenlogistics.com/logos/watchmen-logo-full.png","image":"https://watchmenlogistics.com/og/watchmen-og.jpg","description":"Managed logistics and supply chain orchestration, from 3PL execution to 5PL, across ocean, air, truck and rail. Authorized Trinity Logistics agent.","email":"info@watchmen-logistics.com"},{"@type":"WebSite","@id":"https://watchmenlogistics.com/#website","name":"Watchmen Logistics","url":"https://watchmenlogistics.com/","publisher":{"@id":"https://watchmenlogistics.com/#organization"}}]}</script>
 
   <style>
-    /* ============================================================
-       TOKENS
-    ============================================================ */
-    :root {
-      --bg:          #0A0A0A;
-      --surface:     #111111;
-      --surface-2:   #1A1A1A;
-      --surface-3:   #222222;
-      --border:      rgba(255,255,255,0.08);
-      --border-gold: rgba(212,175,55,0.25);
-      --white:       #FFFFFF;
-      --gray:        #888888;
-      --gray-lt:     #9CA3AF;
-      --gold:        #D4AF37;
-      --gold-deep:   #A8892C;
-      --gold-bright: #F1D27A;
-      --gold-dim:    rgba(212,175,55,0.10);
-      --gold-glow:   rgba(212,175,55,0.20);
-      --grad:        linear-gradient(135deg, #D4AF37 0%, #A8892C 100%);
-      --grad-text:   linear-gradient(90deg, #F1D27A 0%, #D4AF37 100%);
-      --max-w:       1200px;
-      --nav-h:       72px;
-      --radius:      12px;
-      --section-pad: clamp(80px, 10vw, 120px);
-    }
 
     /* ============================================================
        RESET
@@ -67,7 +42,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
     body {
-      background: var(--bg);
+      background: var(--black);
       color: var(--white);
       font-family: 'Inter', sans-serif;
       font-size: 16px;
@@ -141,8 +116,8 @@
       color: var(--gold);
     }
     .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--charcoal);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       padding: 32px;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -195,7 +170,7 @@
       background:
         radial-gradient(ellipse 60% 50% at 70% 30%, rgba(212,175,55,0.06) 0%, transparent 70%),
         radial-gradient(ellipse 50% 60% at 20% 80%, rgba(212,175,55,0.04) 0%, transparent 70%),
-        var(--bg);
+        var(--black);
     }
     .hero-grid {
       position: absolute; inset: 0; z-index: 0;
@@ -342,7 +317,7 @@
     .hero-stats {
       display: flex; flex-wrap: wrap; gap: 40px;
       padding-top: 40px;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--border-soft);
     }
     .hero-stat .num {
       font-family: 'Montserrat', sans-serif;
@@ -360,9 +335,9 @@
     ============================================================ */
     .trusted {
       padding: 60px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+      background: var(--charcoal);
       overflow: hidden;
     }
     .trusted-label {
@@ -437,8 +412,8 @@
     ============================================================ */
     .proof-strip {
       background: #0d0d0d;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
       padding: 0.9rem 0;
       margin: 2rem 0;
     }
@@ -524,8 +499,8 @@
       gap: 24px;
     }
     .tier-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--charcoal);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       padding: 40px 32px;
       text-align: center;
@@ -536,7 +511,7 @@
     .tier-card::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0;
       height: 3px;
-      background: var(--border);
+      background: var(--border-soft);
       transition: background 0.4s ease;
     }
     .tier-card .tier-label {
@@ -556,7 +531,7 @@
     }
     .tier-card.featured {
       border-color: var(--border-gold);
-      background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, var(--surface) 40%);
+      background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, var(--charcoal) 40%);
     }
     .tier-card.featured::before {
       background: var(--grad);
@@ -574,9 +549,9 @@
     ============================================================ */
     .fivepl {
       position: relative;
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      background: var(--charcoal);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
     }
     .fivepl-glow {
       position: absolute; inset: 0;
@@ -591,8 +566,8 @@
       position: relative;
     }
     .fivepl-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
+      background: var(--black);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       padding: 36px;
       transition: border-color 0.3s ease;
@@ -603,8 +578,8 @@
     /* 5PL Dashboard mockup */
     .fivepl-dashboard {
       margin-top: 48px;
-      background: var(--bg);
-      border: 1px solid var(--border);
+      background: var(--black);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       overflow: hidden;
       position: relative;
@@ -613,7 +588,7 @@
       display: flex; align-items: center; gap: 8px;
       padding: 12px 20px;
       background: rgba(255,255,255,0.03);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border-soft);
     }
     .dash-dot { width: 8px; height: 8px; border-radius: 50%; }
     .dash-dot.red { background: #ff5f57; }
@@ -630,10 +605,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 1px;
-      background: var(--border);
+      background: var(--border-soft);
     }
     .dash-panel {
-      background: var(--bg);
+      background: var(--black);
       padding: 24px;
     }
     .dash-panel .label {
@@ -684,7 +659,7 @@
     }
     .dash-route .line-track {
       flex: 1; height: 2px;
-      background: var(--border);
+      background: var(--border-soft);
       border-radius: 2px;
       position: relative;
       overflow: hidden;
@@ -733,11 +708,11 @@
     }
     .dash-kpi-row {
       display: grid; grid-template-columns: repeat(4,1fr);
-      gap: 1px; background: var(--border);
-      border-bottom: 1px solid var(--border);
+      gap: 1px; background: var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
     }
     .dash-kpi {
-      background: var(--bg); padding: 20px 24px;
+      background: var(--black); padding: 20px 24px;
     }
     .dash-metric.gold { color: var(--gold); }
     .dash-metric.alert { color: #F97316; }
@@ -754,10 +729,10 @@
     .dash-sub { font-size: 11px; color: var(--gray); margin-top: 4px; }
     .dash-bottom {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 1px; background: var(--border);
+      gap: 1px; background: var(--border-soft);
     }
     .dash-table-wrap, .dash-alert-wrap {
-      background: var(--bg); padding: 20px 24px;
+      background: var(--black); padding: 20px 24px;
     }
     .dash-section-header {
       font-family: 'Montserrat', sans-serif;
@@ -775,7 +750,7 @@
       font-size: 9px; font-weight: 700;
       letter-spacing: 1.5px; text-transform: uppercase;
       color: var(--gray); padding: 6px 8px;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--border-soft);
       text-align: left;
     }
     .dash-table tbody td {
@@ -787,7 +762,7 @@
       color: var(--white) !important;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700; font-size: 12px;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--border-soft);
       border-bottom: none !important;
     }
     .mode-dot {
@@ -882,8 +857,8 @@
       gap: 20px;
     }
     .mode-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--charcoal);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       padding: 32px 20px;
       text-align: center;
@@ -924,9 +899,9 @@
     ============================================================ */
     .tech-partners {
       position: relative;
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      background: var(--charcoal);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
       overflow: hidden;
     }
     .tech-partners-glow {
@@ -943,8 +918,8 @@
       position: relative;
     }
     .partner-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
+      background: var(--black);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       padding: 40px;
       position: relative;
@@ -1028,8 +1003,8 @@
     /* End-to-end flow bar */
     .e2e-flow {
       margin-top: 48px;
-      background: var(--bg);
-      border: 1px solid var(--border);
+      background: var(--black);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       padding: 32px;
       display: flex;
@@ -1088,7 +1063,7 @@
     .elyon-powered {
       margin-top: 80px;
       padding: 64px 48px;
-      background: var(--surface);
+      background: var(--charcoal);
       border: 1px solid var(--border-gold);
       border-radius: 16px;
       position: relative;
@@ -1132,8 +1107,8 @@
       gap: 20px;
     }
     .elyon-outcome {
-      background: var(--bg);
-      border: 1px solid var(--border);
+      background: var(--black);
+      border: 1px solid var(--border-soft);
       border-radius: 12px;
       padding: 28px 24px;
       transition: border-color 0.3s ease;
@@ -1177,8 +1152,8 @@
       gap: 16px;
     }
     .industry-tag {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--charcoal);
+      border: 1px solid var(--border-soft);
       border-radius: 8px;
       padding: 20px 24px;
       font-family: 'Montserrat', sans-serif;
@@ -1195,9 +1170,9 @@
        TRINITY PARTNERSHIP
     ============================================================ */
     .trinity {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      background: var(--charcoal);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
     }
     .trinity-stats {
       display: grid;
@@ -1208,8 +1183,8 @@
     .trinity-stat {
       text-align: center;
       padding: 28px 20px;
-      background: var(--bg);
-      border: 1px solid var(--border);
+      background: var(--black);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
     }
     .trinity-stat .num {
@@ -1233,8 +1208,8 @@
       position: relative;
     }
     .engage-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--charcoal);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       padding: 36px 28px;
       position: relative;
@@ -1275,14 +1250,14 @@
       margin-top: 3rem;
     }
     .testimonial-card {
-      background: var(--surface);
+      background: var(--charcoal);
       border: 1px solid var(--border-gold);
       border-radius: 12px;
       padding: 2rem;
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
-      background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, var(--surface) 40%);
+      background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, var(--charcoal) 40%);
     }
     .t-stars {
       color: var(--gold);
@@ -1298,7 +1273,7 @@
       margin: 0;
     }
     .t-attribution {
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--border-soft);
       padding-top: 1rem;
     }
     .t-name {
@@ -1372,8 +1347,8 @@
       stroke-width: 2; flex-shrink: 0;
     }
     .contact-form {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--charcoal);
+      border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       padding: 40px;
     }
@@ -1455,6 +1430,7 @@
   <!-- ============================================================
        NAVIGATION
   ============================================================ -->
+  <!-- chrome:nav -->
   <header class="wm-nav" id="wmNav">
     <div class="wm-nav-inner">
       <a href="/" class="wm-logo" aria-label="Watchmen Logistics home">
@@ -1484,6 +1460,7 @@
     <a href="/#contact">Contact</a>
     <a href="https://watchmenhq.elyonsci.ai/book/watchmen-team" target="_blank" rel="noopener" class="wm-cta">See What's Possible &rarr;</a>
   </nav>
+  <!-- /chrome:nav -->
   <main id="main">
 
   <!-- Mobile Menu -->
@@ -2241,7 +2218,7 @@
   <!-- ============================================================
        MID-PAGE CTA BUTTONS
   ============================================================ -->
-  <div style="padding: 2rem 0 3rem; background: var(--bg);">
+  <div style="padding: 2rem 0 3rem; background: var(--black);">
     <div class="wrap">
       <div class="cta-btns">
         <a href="https://watchmenhq.elyonsci.ai/book/watchmen-team" target="_blank" rel="noopener" class="btn btn-primary">See What's Possible &rarr;</a>
@@ -2309,6 +2286,7 @@
   </section>
 
   </main>
+  <!-- chrome:footer -->
   <footer class="wm-footer">
     <div class="wm-footer-wrap">
       <div class="wm-footer-top">
@@ -2354,6 +2332,7 @@
       </div>
     </div>
   </footer>
+  <!-- /chrome:footer -->
 
   <!-- ============================================================
        JAVASCRIPT
