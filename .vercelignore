@@ -1,0 +1,5 @@
+# Repository tooling, not site content
+partials/
+scripts/
+.github/
+README.md
