@@ -8,7 +8,7 @@
   --wm-surface:     #111111;
   --wm-border:      rgba(255,255,255,0.08);
   --wm-white:       #FFFFFF;
-  --wm-gray:        #6B7280;
+  --wm-gray:        #888888;  /* 5.6:1 on --wm-bg; #6B7280 measured 4.1:1 */
   --wm-gray-lt:     #9CA3AF;
   --wm-gold:        #D4AF37;
   --wm-gold-bright: #F1D27A;
@@ -178,7 +178,7 @@ html { scroll-padding-top: var(--wm-nav-h); }
   font-size: 13px; line-height: 1.7; color: var(--wm-gray);
 }
 .wm-footer-cols { display: flex; gap: 56px; flex-wrap: wrap; }
-.wm-footer-col h4 {
+.wm-footer-col h3 {
   margin: 0 0 16px;
   font-family: 'Montserrat', sans-serif;
   font-size: 11px; font-weight: 700;
