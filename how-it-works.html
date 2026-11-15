@@ -135,6 +135,10 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;o
   .chapter{padding:80px 0;}
   .hero{padding:100px 24px 60px;}
   .cta-btns{flex-direction:column;}
+  /* Slide up, not in from the side: the 40px sideways start pushed the
+     timeline 16px past a phone's edge until it revealed. */
+  .reveal-left,.reveal-right{transform:translateY(32px);}
+  .reveal-left.visible,.reveal-right.visible{transform:none;}
 }
 </style>
   <!-- Vercel Web Analytics -->

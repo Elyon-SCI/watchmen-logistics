@@ -186,6 +186,18 @@ input[type="range"]:hover::-webkit-slider-thumb{transform:scale(1.25);box-shadow
   .tl-card{margin:0;}
   .bd-label{width:130px;}
 }
+/* Below 480px the three tabs cannot share a row: words like "Transportation"
+   set a minimum width and the third tab was clipped off the bar (320-375px).
+   Stack them as full-width rows instead. */
+@media(max-width:480px){
+  .tab-nav{flex-direction:column;}
+  .tab-btn{padding:14px 20px;border-right:none;border-bottom:1px solid var(--border);}
+  .tab-btn:last-child{border-bottom:none;}
+}
+/* At 320px two result cards per row overran the edge by 3px. */
+@media(max-width:360px){
+  .rm-grid.col4,.rm-grid.col5{grid-template-columns:1fr;}
+}
 </style>
   <!-- Vercel Web Analytics -->
   <script>
